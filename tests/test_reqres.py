@@ -2,7 +2,7 @@ from allure_commons._allure import step
 
 from reqres_tests.data import single_user_data, create_user_data, create_user_name, create_user_job, register_user_data, \
     users_list, login_data
-from reqres_tests.utils.logger import get_reqres, post_reqres, delete_reqres
+from reqres_tests.utils.logger import send_reqres
 from reqres_tests.utils.schema import validate_schema
 
 
@@ -10,7 +10,7 @@ def test_get_single_user():
     data = single_user_data
 
     with step('Получить информацию о единственном пользователе'):
-        response = get_reqres('/api/users/2')
+        response = send_reqres('/api/users/2', 'get')
 
     with step('Статус код == 200'):
         assert response.status_code == 200
@@ -29,7 +29,7 @@ def test_create_user():
     data = create_user_data
 
     with step('Создать пользователя'):
-        response = post_reqres('/api/users/', json=data)
+        response = send_reqres('/api/users/', 'post', json=data)
 
     with step('Статус код == 201'):
         assert response.status_code == 201
@@ -47,7 +47,7 @@ def test_register_user():
     data = register_user_data
 
     with step('Зарегистрировать пользователя'):
-        response = post_reqres('/api/register', json=data)
+        response = send_reqres('/api/register', 'post', json=data)
 
     with step('Статус код == 200'):
         assert response.status_code == 200
@@ -65,7 +65,7 @@ def test_list_users():
     data = users_list
 
     with step('Получить список пользователей'):
-        response = get_reqres('/api/users?page=2')
+        response = send_reqres('/api/users?page=2', 'get')
 
     with step('Статус код == 200'):
         assert response.status_code == 200
@@ -83,7 +83,7 @@ def test_login_successful():
     data = login_data
 
     with step('Произвести логин'):
-        response = post_reqres('/api/login', json=data)
+        response = send_reqres('/api/login', 'post', json=data)
 
     with step('Статус код == 200'):
         assert response.status_code == 200
@@ -97,7 +97,7 @@ def test_login_successful():
 
 
 def test_delete_user_status_code():
-    response = delete_reqres('/api/users/2')
+    response = send_reqres('/api/users/2', 'delete')
 
     with step('Статус код == 200'):
         assert response.status_code == 204

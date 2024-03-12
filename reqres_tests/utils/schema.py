@@ -5,7 +5,7 @@ from jsonschema import validate
 
 import schemas
 
-SCHEMA_INIT = os.path.abspath(schemas.__file__)  # происходит ссылка на __init__, который никуда не денется
+SCHEMA_INIT = os.path.abspath(schemas.__file__)
 SCHEMA_DIR = os.path.dirname(SCHEMA_INIT)
 
 
