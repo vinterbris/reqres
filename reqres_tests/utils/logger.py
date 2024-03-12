@@ -1,3 +1,4 @@
+import json
 import logging
 
 import allure
@@ -29,30 +30,8 @@ def log(response):
     curl = curlify.to_curl(response.request)
     logging.info(curl)
     allure.attach(body=curl, name='curl', attachment_type=AttachmentType.TEXT, extension='txt')
-
-
-# def get_reqres(url, **kwargs):
-#     with step(f'GET {url}'):
-#         response = requests.get(BASE_URL + url, **kwargs)
-#         curl = curlify.to_curl(response.request)
-#         logging.info(curl)
-#         allure.attach(body=curl, name='curl', attachment_type=AttachmentType.TEXT, extension='txt')
-#     return response
-#
-#
-# def post_reqres(url, **kwargs):
-#     with step(f'POST {url}'):
-#         response = requests.post(BASE_URL + url, **kwargs)
-#         curl = curlify.to_curl(response.request)
-#         logging.info(curl)
-#         allure.attach(body=curl, name='curl', attachment_type=AttachmentType.TEXT, extension='txt')
-#     return response
-#
-#
-# def delete_reqres(url, **kwargs):
-#     with step(f'DELETE {url}'):
-#         response = requests.delete(BASE_URL + url, **kwargs)
-#         curl = curlify.to_curl(response.request)
-#         logging.info(curl)
-#         allure.attach(body=curl, name='curl', attachment_type=AttachmentType.TEXT, extension='txt')
-#     return response
+    allure.attach(body=response.request.method + " " + response.request.url, name="Request",
+                  attachment_type=AttachmentType.TEXT, extension="txt")
+    if response.text:
+        allure.attach(body=json.dumps(response.json(), indent=4, ensure_ascii=True), name="Response",
+                      attachment_type=AttachmentType.JSON, extension="json")
