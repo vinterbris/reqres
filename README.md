@@ -56,6 +56,6 @@ allure serve
 
 ## Оповещения в мессенджер
 
-> _Настроена отправка оповещений в телеграм канал. Возможна настройка для email, slack, discord, skype, mattermost_
+> _Настроена отправка оповещений в телеграм канал. Возможна настройка для Email,Slack, Discord, Skype, Mattermost, Rocket.Chat_
 
 <img src="resources/images/screenshot_telegram.png" width="450" height="">
