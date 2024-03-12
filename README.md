@@ -1,4 +1,4 @@
-<h1 align="center">Проект api тестов <a href="https://reqres.in">reqres.in</a></h1>
+<h1 align="center">Проект API тестов <a href="https://reqres.in">reqres.in</a></h1>
 
 <h3 align="center">Python | Pytest | Requests | Jenkins | Allure | Telegram</h3>
 <h3 align="center">
@@ -53,3 +53,9 @@ pytest
 ```bazaar
 allure serve
 ```
+
+## Оповещения в мессенджер
+
+> _Настроена отправка оповещений в телеграм канал. Возможна настройка для email, slack, discord, skype, mattermost_
+
+<img src="resources/images/readme_telegram.png" width="" height="">
