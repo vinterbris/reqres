@@ -58,4 +58,4 @@ allure serve
 
 > _Настроена отправка оповещений в телеграм канал. Возможна настройка для email, slack, discord, skype, mattermost_
 
-<img src="resources/images/screenshot_telegram.png" width="300" height="">
+<img src="resources/images/screenshot_telegram.png" width="500" height="">
