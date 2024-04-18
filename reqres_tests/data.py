@@ -6,6 +6,14 @@ single_user_data = {
     "avatar": "https://reqres.in/img/faces/2-image.jpg"
 }
 
+single_resource_data = {
+    "id": 2,
+    "name": "fuchsia rose",
+    "year": 2001,
+    "color": "#C74375",
+    "pantone_value": "17-2031"
+}
+
 create_user_name = 'John'
 create_user_job = 'Carpenter'
 create_user_data = {"name": create_user_name, "job": create_user_job}
@@ -59,5 +67,50 @@ users_list = [
         "first_name": "Rachel",
         "last_name": "Howell",
         "avatar": "https://reqres.in/img/faces/12-image.jpg"
+    }
+]
+
+resources_list = [
+    {
+        "id": 1,
+        "name": "cerulean",
+        "year": 2000,
+        "color": "#98B2D1",
+        "pantone_value": "15-4020"
+    },
+    {
+        "id": 2,
+        "name": "fuchsia rose",
+        "year": 2001,
+        "color": "#C74375",
+        "pantone_value": "17-2031"
+    },
+    {
+        "id": 3,
+        "name": "true red",
+        "year": 2002,
+        "color": "#BF1932",
+        "pantone_value": "19-1664"
+    },
+    {
+        "id": 4,
+        "name": "aqua sky",
+        "year": 2003,
+        "color": "#7BC4C4",
+        "pantone_value": "14-4811"
+    },
+    {
+        "id": 5,
+        "name": "tigerlily",
+        "year": 2004,
+        "color": "#E2583E",
+        "pantone_value": "17-1456"
+    },
+    {
+        "id": 6,
+        "name": "blue turquoise",
+        "year": 2005,
+        "color": "#53B0AE",
+        "pantone_value": "15-5217"
     }
 ]
