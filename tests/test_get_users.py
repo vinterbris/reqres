@@ -40,7 +40,7 @@ def test_list_users():
         validate_schema(body, "get_users_list.json")
 
 def test_single_user_not_found():
-    with step('Получить информацию о единственном пользователе'):
+    with step('Запросить информацию об отсутствующем пользователе пользователе'):
         response = send_reqres('/api/users/23', 'get')
 
     with step('Статус код == 404'):

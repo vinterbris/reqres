@@ -29,7 +29,7 @@ def test_update_user_put():
     name = create_user_name
     job = create_user_job
     data = user_data
-    with step('Создать пользователя'):
+    with step('Обновить пользователя'):
         response = send_reqres('/api/users/2', 'put', json=data)
 
     with step('Статус код == 200'):
@@ -47,7 +47,7 @@ def test_update_user_patch():
     name = create_user_name
     job = create_user_job
     data = user_data
-    with step('Создать пользователя'):
+    with step('Обновить пользователя'):
         response = send_reqres('/api/users/2', 'patch', json=data)
 
     with step('Статус код == 200'):

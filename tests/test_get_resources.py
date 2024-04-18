@@ -8,7 +8,7 @@ from reqres_tests.utils.schema import validate_schema
 def test_get_single_resource():
     data = single_resource_data
 
-    with step('Получить информацию о единственном пользователе'):
+    with step('Получить информацию о единственном ресурсе'):
         response = send_reqres('/api/unknown/2', 'get')
 
     with step('Статус код == 200'):
@@ -25,7 +25,7 @@ def test_get_single_resource():
 def test_list_resources():
     data = resources_list
 
-    with step('Получить список пользователей'):
+    with step('Получить список ресурсов'):
         response = send_reqres('/api/unknown', 'get')
 
     with step('Статус код == 200'):
