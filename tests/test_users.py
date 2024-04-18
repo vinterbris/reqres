@@ -62,10 +62,18 @@ def test_update_user_patch():
         validate_schema(body, "update_user.json")
 
 def test_delete_user():
-    response = send_reqres('/api/users/2', 'delete')
+    with step('Удалить пользователя'):
+        response = send_reqres('/api/users/2', 'delete')
 
-    with step('Статус код == 200'):
+    with step('Статус код == 204'):
         assert response.status_code == 204
 
     with step('Проверить, что ответ пустой'):
         assert response.text == ''
+
+def test_delayed_response():
+    with step('Удалить пользователя'):
+        response = send_reqres('/api/users?delay=3', 'get')
+
+    with step('Статус код == 200'):
+        assert response.status_code == 200
