@@ -8,7 +8,7 @@ from reqres_tests.utils.schema import validate_schema
 def test_login_successful():
     data = login_data
 
-    with stallep('Произвести логин'):
+    with step('Произвести логин'):
         response = send_reqres('/api/login', 'post', json=data)
 
     with step('Статус код == 200'):
