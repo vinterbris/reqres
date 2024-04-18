@@ -16,7 +16,7 @@ single_resource_data = {
 
 create_user_name = 'John'
 create_user_job = 'Carpenter'
-create_user_data = {"name": create_user_name, "job": create_user_job}
+user_data = {"name": create_user_name, "job": create_user_job}
 
 register_user_data = {"email": "eve.holt@reqres.in", "password": "pistol"}
 

@@ -23,6 +23,14 @@ def send_reqres(url, method, **kwargs):
         with step(f'DELETE {url}'):
             response = requests.delete(BASE_URL + url, **kwargs)
             log(response)
+    elif method == 'put':
+        with step(f'PUT {url}'):
+            response = requests.put(BASE_URL + url, **kwargs)
+            log(response)
+    elif method == 'patch':
+        with step(f'PATCH {url}'):
+            response = requests.patch(BASE_URL + url, **kwargs)
+            log(response)
     return response
 
 
