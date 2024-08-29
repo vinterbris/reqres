@@ -30,15 +30,9 @@
 - [x] Неуспешная регистрация пользователя
 - [x] Успешный логин пользователя
 - [x] Неуспешный логин пользователя
+> <a target="_blank" href="http://176.123.163.26:8888/job/Reqres-project/">Ссылка на проект в Jenkins</a>
 
 ## Запуск тестов
-
-### Удаленно
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/C09-vbr_s-diploma_api/">Ссылка на проект в Jenkins</a>
-#### Для запуска автотестов в Jenkins
-
-1. Выбрать пункт `Build now`
-2. Результат запуска сборки можно посмотреть в отчёте Allure
 
 ### Локально
 
@@ -46,7 +40,7 @@
 ```bash
 git clone https://github.com/vinterbris/qa_guru_python_9_24.git
 ```
-2. В терминале pycharm создать и активировать виртуальное окружение
+2. В терминале в директории проекта создать и активировать виртуальное окружение
 ```bash
 python -m venv .venv 
 source .venv/bin/activate 
@@ -61,7 +55,7 @@ pytest
 ```
 
 #### Получение отчета allure
-```bazaar
+```bash
 allure serve
 ```
 

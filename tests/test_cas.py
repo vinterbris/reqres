@@ -1,6 +1,11 @@
 from allure_commons._allure import step
 
-from reqres_tests.data import login_data, register_user_data, register_user_data_incomplete, login_data_incomplete
+from reqres_tests.data import (
+    login_data,
+    register_user_data,
+    register_user_data_incomplete,
+    login_data_incomplete,
+)
 from reqres_tests.utils.logger import send_reqres
 from reqres_tests.utils.schema import validate_schema
 
@@ -8,7 +13,7 @@ from reqres_tests.utils.schema import validate_schema
 def test_login_successful():
     data = login_data
 
-    with stallep('Произвести логин'):
+    with step('Произвести логин'):
         response = send_reqres('/api/login', 'post', json=data)
 
     with step('Статус код == 200'):
