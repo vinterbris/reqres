@@ -32,7 +32,7 @@
 - [x] Неуспешный логин пользователя
 - [x] Ответ с задержкой
 
-> <a target="_blank" href="http://176.123.163.26:8888/job/Reqres-project/">Ссылка на проект в Jenkins</a>
+> <a target="_blank" href="http://176.123.163.26:8888/job/Reqres-project/">Ссылка на проект в мой Jenkins: доступны прогоны и allure отчёты</a>
 
 
 ## Запуск тестов
