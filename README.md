@@ -64,6 +64,12 @@ pytest
 allure serve
 ```
 
+## Пример отчёта
+
+![allure](resources/images/screenshot_allure.png)
+
+![allure](resources/images/screenshot_allure_steps.png)
+
 ## Оповещения в мессенджер
 
 > _Настроена отправка оповещений в телеграм канал. Возможна настройка для Email,Slack, Discord, Skype, Mattermost, Rocket.Chat_
