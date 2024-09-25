@@ -18,11 +18,7 @@ create_user_name = 'John'
 create_user_job = 'Carpenter'
 user_data = {"name": create_user_name, "job": create_user_job}
 
-register_user_data = {"email": "eve.holt@reqres.in", "password": "pistol"}
-
-
-login_data = {"email": "eve.holt@reqres.in", "password": "cityslicka"}
-login_data_incomplete = {"email": "eve.holt@reqres.in"}
+login_data = {"email": "eve.holt@reqres.in", "password": "pistol"}
 
 users_list = [
     {
