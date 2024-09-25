@@ -4,3 +4,4 @@ jsonschema==4.21.1
 curlify==2.2.1
 allure-pytest==2.13.5
 python-dotenv==1.0.1
+faker==29.0.0
