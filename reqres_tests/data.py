@@ -14,10 +14,6 @@ single_resource_data = {
     "pantone_value": "17-2031"
 }
 
-create_user_name = 'John'
-create_user_job = 'Carpenter'
-user_data = {"name": create_user_name, "job": create_user_job}
-
 login_data = {"email": "eve.holt@reqres.in", "password": "pistol"}
 
 users_list = [
