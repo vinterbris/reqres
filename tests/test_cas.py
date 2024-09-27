@@ -8,7 +8,17 @@ from reqres_tests.utils.schema import validate_schema
 fake = Faker()
 
 
+
+
 class TestRegistration:
+    def test_registration_allowed_methods(self):
+        with step('Запросить опции для регистрации'):
+            response = send_reqres('/api/register', 'options')
+            headers = response.headers
+
+        with step('Проверить разрешённые методы'):
+            assert headers['Access-Control-Allow-Methods'] == 'GET,HEAD,PUT,PATCH,POST,DELETE'
+
     def test_register_user_successful(self):
         password = fake.password()
         data = {"email": "eve.holt@reqres.in", "password": password}

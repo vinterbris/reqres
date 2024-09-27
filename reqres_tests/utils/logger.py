@@ -31,6 +31,10 @@ def send_reqres(url, method, **kwargs):
         with step(f'PATCH {url}'):
             response = requests.patch(BASE_URL + url, **kwargs)
             log(response)
+    elif method == 'options':
+        with step(f'OPTIONS {url}'):
+            response = requests.options(BASE_URL + url, **kwargs)
+            log(response)
     return response
 
 
